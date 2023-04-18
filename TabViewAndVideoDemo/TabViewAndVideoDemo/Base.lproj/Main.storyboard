@@ -3,6 +3,7 @@
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -40,7 +41,7 @@
                                     <fontDescription key="titleFontDescription" type="system" pointSize="35"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <segue destination="BYZ-38-t0r" kind="show" id="CKz-ju-TfQ"/>
+                                    <segue destination="gla-a3-tIs" kind="show" id="ige-PW-2oM"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -53,7 +54,7 @@
             </objects>
             <point key="canvasLocation" x="-36" y="1"/>
         </scene>
-        <!--Video View Controller-->
+        <!--Video-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="VideoViewController" customModule="TabViewAndVideoDemo" customModuleProvider="target" sceneMemberID="viewController">
@@ -77,6 +78,10 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="erD-di-pNd" secondAttribute="trailing" constant="16" id="Q99-OK-OrF"/>
                         </constraints>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Video" id="LNI-os-RTe">
+                        <imageReference key="image" image="video" catalog="system" symbolScale="large"/>
+                        <color key="badgeColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBarItem>
                     <navigationItem key="navigationItem" id="JPg-qu-Sp5"/>
                     <connections>
                         <outlet property="myVideoView" destination="erD-di-pNd" id="ybk-q4-x9Y"/>
@@ -84,10 +89,107 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="759.5419847328244" y="0.70422535211267612"/>
+            <point key="canvasLocation" x="1796" y="-283"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="aC4-eM-wIE">
+            <objects>
+                <tabBarController id="gla-a3-tIs" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="I01-C6-wXE"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Dci-nV-WB0">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="selectedImageTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="QTO-5k-T6V"/>
+                        <segue destination="dBg-TM-A5J" kind="relationship" relationship="viewControllers" id="wOB-hn-qy5"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xU0-QT-KDj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="873" y="1"/>
+        </scene>
+        <!--Table-->
+        <scene sceneID="oqY-KO-VoI">
+            <objects>
+                <viewController id="dBg-TM-A5J" customClass="TableViewController" customModule="TabViewAndVideoDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="EIU-oE-34s">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="sGo-sb-29x">
+                                <rect key="frame" x="0.0" y="103" width="393" height="666"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" id="uW9-eA-FSM">
+                                        <rect key="frame" x="0.0" y="50" width="393" height="43.666667938232422"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="uW9-eA-FSM" id="Zmg-a8-RPK">
+                                            <rect key="frame" x="0.0" y="0.0" width="393" height="43.666667938232422"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="g32-h8-y4R"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="sGo-sb-29x" firstAttribute="top" secondItem="g32-h8-y4R" secondAttribute="top" id="2mk-0w-OgA"/>
+                            <constraint firstItem="sGo-sb-29x" firstAttribute="leading" secondItem="g32-h8-y4R" secondAttribute="leading" id="rVN-ou-YmF"/>
+                            <constraint firstItem="g32-h8-y4R" firstAttribute="bottom" secondItem="sGo-sb-29x" secondAttribute="bottom" id="xfp-AP-qfR"/>
+                            <constraint firstItem="g32-h8-y4R" firstAttribute="trailing" secondItem="sGo-sb-29x" secondAttribute="trailing" id="yn0-vG-QCp"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Table" id="gc5-zH-AUl">
+                        <imageReference key="image" image="table" catalog="system" symbolScale="large"/>
+                    </tabBarItem>
+                    <connections>
+                        <outlet property="myTable" destination="sGo-sb-29x" id="fZT-c8-MMh"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JoF-VT-Dxt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1795" y="397"/>
+        </scene>
+        <!--Table Item View Controller-->
+        <scene sceneID="0E7-xQ-BrD">
+            <objects>
+                <viewController storyboardIdentifier="TableItemViewController" id="uo3-OX-czb" customClass="TableItemViewController" customModule="TabViewAndVideoDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="pWs-Mx-UxH">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cmu-fc-0G0">
+                                <rect key="frame" x="15" y="416" width="363" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="4PJ-RS-o6o"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="4PJ-RS-o6o" firstAttribute="trailing" secondItem="cmu-fc-0G0" secondAttribute="trailing" constant="15" id="1ss-ME-v2k"/>
+                            <constraint firstItem="cmu-fc-0G0" firstAttribute="leading" secondItem="4PJ-RS-o6o" secondAttribute="leading" constant="15" id="A7q-MD-oyy"/>
+                            <constraint firstItem="cmu-fc-0G0" firstAttribute="top" secondItem="4PJ-RS-o6o" secondAttribute="top" constant="357" id="QjY-sk-Iwk"/>
+                            <constraint firstItem="4PJ-RS-o6o" firstAttribute="bottom" secondItem="cmu-fc-0G0" secondAttribute="bottom" constant="366" id="iRw-dJ-IBb"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tableItem" destination="cmu-fc-0G0" id="DoG-63-nHP"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QTH-NS-79P" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2775" y="396"/>
         </scene>
     </scenes>
     <resources>
+        <image name="table" catalog="system" width="128" height="93"/>
+        <image name="video" catalog="system" width="128" height="82"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

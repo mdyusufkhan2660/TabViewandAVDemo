@@ -14,6 +14,8 @@
 		2D3DE31629E7041900166B60 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2D3DE31529E7041900166B60 /* Assets.xcassets */; };
 		2D3DE31929E7041900166B60 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2D3DE31729E7041900166B60 /* LaunchScreen.storyboard */; };
 		2D3DE32129E7069D00166B60 /* VideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D3DE32029E7069D00166B60 /* VideoViewController.swift */; };
+		2D3DE32329E71C2400166B60 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D3DE32229E71C2400166B60 /* TableViewController.swift */; };
+		2D3DE32529E71C3300166B60 /* TableItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D3DE32429E71C3300166B60 /* TableItemViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,8 @@
 		2D3DE31829E7041900166B60 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2D3DE31A29E7041900166B60 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2D3DE32029E7069D00166B60 /* VideoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoViewController.swift; sourceTree = "<group>"; };
+		2D3DE32229E71C2400166B60 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
+		2D3DE32429E71C3300166B60 /* TableItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableItemViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +70,8 @@
 				2D3DE31529E7041900166B60 /* Assets.xcassets */,
 				2D3DE31729E7041900166B60 /* LaunchScreen.storyboard */,
 				2D3DE31A29E7041900166B60 /* Info.plist */,
+				2D3DE32229E71C2400166B60 /* TableViewController.swift */,
+				2D3DE32429E71C3300166B60 /* TableItemViewController.swift */,
 			);
 			path = TabViewAndVideoDemo;
 			sourceTree = "<group>";
@@ -141,9 +147,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2D3DE32529E71C3300166B60 /* TableItemViewController.swift in Sources */,
 				2D3DE31129E7041800166B60 /* ViewController.swift in Sources */,
 				2D3DE30D29E7041800166B60 /* AppDelegate.swift in Sources */,
 				2D3DE32129E7069D00166B60 /* VideoViewController.swift in Sources */,
+				2D3DE32329E71C2400166B60 /* TableViewController.swift in Sources */,
 				2D3DE30F29E7041800166B60 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
